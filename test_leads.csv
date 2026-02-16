@@ -1,0 +1,6 @@
+Name,Email,Role,Company,Bio_LinkedIn
+"Alice Start",alice@newventure.com,"Founder & CEO","Stealth AI","Je viens de lancer ma startup tech. Je passe mes journées à essayer de comprendre qui sont mes premiers clients et quel problème ils ont vraiment. C'est dur de trouver le product-market fit."
+"Bob Indie",bob@indiehacker.io,"Solopreneur","Indie Projects","Développeur qui essaie de lancer un SaaS. Je code le week-end mais je galère à valider mon idée. Je cherche à faire des interviews utilisateurs pour ne pas coder pour rien."
+"Carol Corp",carol@bigcorp.com,"HR Director","BigCorp Inc","Je gère les ressources humaines pour 500 employés. Mon focus est la rétention des talents et la gestion de la paie. Pas intéressée par l'entrepreneuriat."
+"Dave Sales",dave@enterprise.com,"VP of Sales","Salesforce","Expert en closing de deals Enterprise. Je cherche à optimiser mon funnel de vente pour passer de 10M$ à 100M$ de revenus. Je ne fais pas de discovery, je vends."
+"Eve Student",eve@university.edu,"Student","University","Étudiante en informatique. J'apprends le React et le Python. Je cherche un stage pour l'été prochain."
