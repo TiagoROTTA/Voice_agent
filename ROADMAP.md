@@ -2,38 +2,38 @@
 
 ## PHASE 0: SETUP & INITIALIZATION
 - [x] Initialize Next.js project (TypeScript, Tailwind, App Router).
-- [ ] Setup Supabase project (Auth + Database).
-- [ ] Connect Env Variables in `.env.local`.
+- [x] Setup Supabase project (Auth + Database).
+- [x] Connect Env Variables in `.env.local`.
 - [x] Install UI dependencies (`shadcn-ui`, `lucide-react`, `framer-motion`).
 
 ## PHASE 1: DATABASE & BACKEND (Supabase)
-- [ ] Create `campaigns` table (Strict schema: 4 fixed questions).
-- [ ] Create `leads` table (With ICP match status & unique token).
+- [x] Create `campaigns` table (Strict schema: 4 fixed questions).
+- [x] Create `leads` table (With ICP match status & unique token).
 - [ ] Create `interview_logs` table (JSONB storage for answers).
 - [ ] Setup RLS (Row Level Security) Policies.
 - [ ] Generate TypeScript types (`database.types.ts`).
 
 ## PHASE 2: FOUNDER DASHBOARD (Input)
-- [ ] Create Auth pages (Login/Signup).
-- [ ] Create "New Campaign" Form.
-    - [ ] Inputs: Hypothesis, ICP, 4 Questions (Fixed inputs).
-- [ ] Create "Lead Upload" Interface.
-    - [ ] CSV Parsing.
-    - [ ] **Edge Function:** "Filter Leads" (Calls OpenAI/Claude to match ICP).
-- [ ] Create "Results" View.
-    - [ ] Table of valid leads with their unique links.
+- [x] Create Auth pages (Login/Signup).
+- [x] Create "New Campaign" Form.
+    - [x] Inputs: Hypothesis, ICP, 4 Questions (Fixed inputs).
+- [x] Create "Lead Upload" Interface.
+    - [x] CSV Parsing.
+    - [x] **Edge Function:** "Filter Leads" (Calls OpenAI/Claude to match ICP). *(Implémenté via Server Action + OpenAI)*
+- [x] Create "Results" View.
+    - [x] Table of valid leads with their unique links.
     - [ ] Export to CSV button.
 
 ## PHASE 3: THE VOICE AGENT (The Core)
-- [ ] Create Public Interview Page (`/interview/[token]`).
-    - [ ] Mobile-first UI (Simple "Start" button).
-- [ ] Implement 11Labs WebSocket Client.
-    - [ ] Handle Microphone permissions.
+- [x] Create Public Interview Page (`/interview/[token]`).
+    - [x] Mobile-first UI (Simple "Start" button).
+- [x] Implement 11Labs WebSocket Client.
+    - [x] Handle Microphone permissions.
     - [ ] Audio Visualizer (Simple waveform).
-- [ ] Implement "The Brain" (System Prompt Injection).
-    - [ ] Inject user's 4 questions dynamically.
-    - [ ] Implement the "7-second empathy" logic.
-    - [ ] Implement the "Availability Gate".
+- [x] Implement "The Brain" (System Prompt Injection).
+    - [x] Inject user's 4 questions dynamically.
+    - [ ] Implement the "7-second empathy" logic *(à configurer dans l’agent 11Labs)*.
+    - [ ] Implement the "Availability Gate" *(à configurer dans l’agent 11Labs)*.
 
 ## PHASE 4: POST-PROCESSING & OUTPUT
 - [ ] Create "Transcript Processor" (Edge Function).
