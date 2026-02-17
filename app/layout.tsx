@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Alar MVP",
+  title: "Cluvo MVP",
   description: "Voice-led customer interviews",
 };
 

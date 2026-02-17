@@ -61,14 +61,37 @@ export default async function InterviewPage({
   const leadName = getLeadName(lead.raw_data as Record<string, unknown> | null);
   const agentId = process.env.NEXT_PUBLIC_ELEVENLABS_AGENT_ID ?? "";
 
+  const q1 = (campaign.question_1 ?? "").trim();
+  const q2 = (campaign.question_2 ?? "").trim();
+  const q3 = (campaign.question_3 ?? "").trim();
+  const q4 = (campaign.question_4 ?? "").trim();
+  const pain = (campaign.hypothesis_pain ?? "").trim();
+  const job = (campaign.hypothesis_job ?? "").trim();
+
+  // Script injecté dans l'agent : une seule variable à placer dans le prompt ElevenLabs.
+  const interviewScript = [
+    pain && `Contexte (hypothèse douleur) : ${pain}`,
+    job && `Contexte (job to be fait) : ${job}`,
+    `Tu parles à ${leadName || "l'interviewé(e)"}.`,
+    "",
+    "Tu DOIS poser ces 4 questions pendant l'entretien, dans l'ordre, de façon naturelle :",
+    q1 && `1) ${q1}`,
+    q2 && `2) ${q2}`,
+    q3 && `3) ${q3}`,
+    q4 && `4) ${q4}`,
+  ]
+    .filter(Boolean)
+    .join("\n");
+
   const dynamicVariables: Record<string, string> = {
     lead_name: leadName,
-    hypothesis_pain: campaign.hypothesis_pain ?? "",
-    hypothesis_job: campaign.hypothesis_job ?? "",
-    question_1: campaign.question_1 ?? "",
-    question_2: campaign.question_2 ?? "",
-    question_3: campaign.question_3 ?? "",
-    question_4: campaign.question_4 ?? "",
+    hypothesis_pain: pain,
+    hypothesis_job: job,
+    question_1: q1,
+    question_2: q2,
+    question_3: q3,
+    question_4: q4,
+    interview_script: interviewScript,
   };
 
   return (

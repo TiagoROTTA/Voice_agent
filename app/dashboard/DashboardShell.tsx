@@ -43,7 +43,7 @@ export function DashboardShell({
     <SidebarProvider>
       <Sidebar className="border-r border-zinc-200 bg-white">
         <SidebarHeader className="border-b border-zinc-200 p-4">
-          <span className="font-semibold text-black">Alar</span>
+          <span className="font-semibold text-black">Cluvo</span>
         </SidebarHeader>
         <SidebarContent>
           <SidebarGroup>

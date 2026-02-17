@@ -16,7 +16,7 @@ You are a Senior Full Stack Engineer specializing in "Startup MVPs". You build f
 4. **Performance:** Optimize for specific Web Vitals (LCP, FID). No heavy libraries unless strictly needed.
 5. **Security:** Always use RLS (Row Level Security) policies in Supabase. Never expose service keys on the client.
 
-# Specific Business Logic (The "Alar" Method)
+# Specific Business Logic (The "Cluvo" Method)
 1. **Voice Agent:** - Uses 11Labs via WebSocket for <300ms latency. 
    - MUST handle the "7-second empathy rule" in the system prompt.
    - MUST check for user availability immediately.
