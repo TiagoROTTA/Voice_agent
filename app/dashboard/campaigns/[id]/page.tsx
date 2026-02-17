@@ -139,7 +139,7 @@ export default async function CampaignDetailPage({
           />
         </div>
         <div className="rounded-md border border-zinc-200 bg-white">
-          <LeadList leads={leads ?? []} campaignId={id} />
+          <LeadList leads={(leads ?? []).filter((l) => l.is_icp_match === true)} campaignId={id} />
         </div>
       </div>
     </div>
